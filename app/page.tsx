@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function QRProfileLandingPage() {
   const links = [
     {
@@ -27,23 +29,20 @@ export default function QRProfileLandingPage() {
       <div className="w-full max-w-md bg-zinc-900 border border-zinc-800 rounded-3xl shadow-2xl overflow-hidden">
         <div className="relative h-40 bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400">
           <div className="absolute -bottom-14 left-1/2 -translate-x-1/2">
-            <img
-              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=500&auto=format&fit=crop"
-              alt="Profile"
-              className="w-28 h-28 rounded-full border-4 border-black object-cover shadow-xl"
-            />
+            <Image src="/logo.png" alt="Profile" width={112} height={112}
+  className="rounded-full border-4 border-black object-cover shadow-xl"
+/>
           </div>
         </div>
 
         <div className="pt-20 pb-8 px-6 text-center">
-          <h1 className="text-3xl font-bold tracking-tight">Elmin</h1>
+          <h1 className="text-3xl font-bold tracking-tight">EKE perfumes</h1>
           <p className="text-zinc-400 mt-2 text-sm">
-            Full Stack Developer • QA Chapter Lead
+            Handcrafted Fragrances • Baku, Azerbaijan
           </p>
 
           <p className="mt-5 text-zinc-300 leading-relaxed text-sm">
-            Web development, automation, software solutions və digital məhsullar.
-            Mənim sosial şəbəkələrim və əlaqə məlumatlarım aşağıdadır.
+            Hər ətir bir hekayədir. EKE Perfumes ilə özünəməxsus qoxunuzu tapın — təbii inqrediyentlər, əl işi, sonsuz zövq.
           </p>
 
           <div className="mt-8 space-y-4">
@@ -71,15 +70,18 @@ export default function QRProfileLandingPage() {
             <h2 className="font-semibold mb-3 text-white">Əlaqə</h2>
 
             <div className="space-y-2 text-sm text-zinc-300">
-              <p>📞 +994 50 123 45 67</p>
-              <p>✉️ elmin@example.com</p>
+              <p>📞 +994 55 943 66 67</p>
+              <p>✉️ ekeperfume@gmail.com</p>
               <p>📍 Bakı, Azərbaycan</p>
             </div>
           </div>
 
-          <button className="mt-8 w-full bg-white text-black font-semibold py-4 rounded-2xl hover:scale-[1.02] transition-transform duration-300">
-            Mənimlə Əlaqə
-          </button>
+          <a
+  href="tel:+994559436667"
+  className="block mt-8 w-full bg-white text-black font-semibold py-4 rounded-2xl hover:scale-[1.02] transition-transform duration-300"
+>
+  Mənimlə Əlaqə
+</a>
         </div>
       </div>
     </div>
