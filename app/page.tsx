@@ -61,18 +61,23 @@ export default function QRProfileLandingPage() {
 ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-zinc-900 to-black text-white flex items-center justify-center px-4 py-10">
+    <div className="relative min-h-screen bg-gradient-to-br from-black via-zinc-900 to-black text-white flex items-center justify-center px-4 py-10 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden">
+  <div className="absolute top-0 left-0 w-72 h-72 bg-yellow-500/20 rounded-full blur-3xl" />
+  
+  <div className="absolute bottom-0 right-0 w-72 h-72 bg-pink-500/10 rounded-full blur-3xl" />
+</div>
      <div className="w-full max-w-md bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl overflow-hidden">
         <div className="relative h-40 bg-gradient-to-r from-yellow-600 via-amber-500 to-yellow-300">
           <div className="absolute -bottom-14 left-1/2 -translate-x-1/2">
             <Image src="/logo.png" alt="Profile" width={112} height={112}
-  className="rounded-full border-4 border-black object-cover shadow-xl"
+  className="rounded-full border-4 border-black object-cover shadow-2xl shadow-yellow-500/40"
 />
           </div>
         </div>
 
         <div className="pt-20 pb-8 px-6 text-center">
-          <h1 className="text-3xl font-bold tracking-tight">EKE perfumes</h1>
+          <h1 className="text-4xl font-extrabold tracking-tight bg-gradient-to-r from-yellow-300 to-yellow-500 bg-clip-text text-transparent">EKE perfumes</h1>
           <p className="text-zinc-400 mt-2 text-sm">
             Handcrafted Fragrances • Baku, Azerbaijan
           </p>
@@ -88,7 +93,7 @@ export default function QRProfileLandingPage() {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-between bg-white/5 hover:bg-white/10 border border-white/10 transition-all duration-300 rounded-2xl px-5 py-4 group hover:scale-[1.02]"
+                className="flex items-center justify-between bg-white/5 hover:bg-white/10 border border-white/10 transition-all duration-300 rounded-2xl px-5 py-4 group hover:scale-[1.02] shadow-lg shadow-black/20"
               >
                 <div className="flex items-center gap-4">
                   <span className="text-2xl">{link.icon}</span>
@@ -114,8 +119,7 @@ export default function QRProfileLandingPage() {
 
           <a
   href="tel:+994559436667"
-  className="block mt-8 w-full bg-gradient-to-r from-yellow-500 to-amber-300 text-black font-bold py-4 rounded-2xl hover:scale-[1.03] transition-all duration-300 shadow-lg shadow-yellow-500/20"
->
+className="block mt-8 w-full bg-gradient-to-r from-yellow-500 to-amber-300 text-black font-bold py-4 rounded-2xl hover:scale-[1.03] transition-all duration-300 shadow-lg shadow-yellow-500/20 animate-pulse">
   Mənimlə Əlaqə
 </a>
         </div>
